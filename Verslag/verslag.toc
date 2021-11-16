@@ -1,0 +1,11 @@
+\babel@toc {dutch}{}
+\contentsline {section}{\numberline {1}Inleiding}{2}{}%
+\contentsline {section}{\numberline {2}Doelstelling}{3}{}%
+\contentsline {section}{\numberline {3}Scope}{4}{}%
+\contentsline {section}{\numberline {4}Methodology}{5}{}%
+\contentsline {subsection}{\numberline {4.1}Finding the malicious applications}{5}{}%
+\contentsline {subsection}{\numberline {4.2}Behavior analysis}{5}{}%
+\contentsline {subsection}{\numberline {4.3}Network analysis}{6}{}%
+\contentsline {subsection}{\numberline {4.4}Code analysis}{6}{}%
+\contentsline {subsection}{\numberline {4.5}Process analysis}{6}{}%
+\contentsline {subsection}{\numberline {4.6}Countermeasures and detection}{6}{}%
