@@ -1,32 +1,67 @@
 \section{Methodology}
 
-For proper analysis of an android application a testing environment has to be configured. Every member had chosen to either work in a virtual machine or use their local machine to test the application. Using a local machine, every member must consider their own safety when working with malicious software. Publicly available tools were also properly setup on the local or virtual machine such as Android Studio, mitmproxy and Wireshark.
+For proper analysis of an android application a testing environment has to be configured.
+Every member had chosen to either work in a virtual machine or use their local machine to test the application.
+Using a local machine, every member must consider their own safety when working with malicious software.
+Publicly available tools were also properly setup on the local or virtual machine such as Android Studio, mitmproxy and Wireshark.
 
 \subsection{Finding the malicious applications}
 
-For the research it was decided that all the selected applications had come from the site Koodous and were confirmed to be malicious with the site VirusTotal. This had been done individually by all team members to find applicable APK files for the research. Some checks were performed manually to see if the applications contained any pointers that indicated that they contained malware. The application was checked on its availability for download on the Google Play store. The potentially malicious application was compared with the variant from the Google Play store. A few examples of these pointers were differing sizes or if both had the exact same package name as the Google Play store variant while differing in permissions or certificates. If it had one of those pointers, then it likely was an indicator that there was something extra hidden in the code.
+For the research it was decided that all the selected applications had come from the site Koodous and were confirmed to be malicious with the site VirusTotal.
+This had been done individually by all team members to find applicable APK files for the research.
+Some checks were performed manually to see if the applications contained any pointers that indicated that they contained malware.
+The application was checked on its availability for download on the Google Play store.
+The potentially malicious application was compared with the variant from the Google Play store.
+A few examples of these pointers were differing sizes or if both had the exact same package name as the Google Play store variant while differing in permissions or certificates.
+If it had one of those pointers, then it likely was an indicator that there was something extra hidden in the code.
 
-The application was retrieved from both Koodous and the Google Play Store. The APK from Google Play was downloaded using the apkcombo.com tool. Both APK files were uploaded to VirusTotal to check for any differences in permissions between the two versions of the application. Anything VirusTotal had marked anything as malicious, was noted. This was up to the discretion of every individual team member to decide if they decided to work on the chosen application for the duration of the project.
+The application was retrieved from both Koodous and the Google Play Store.
+The APK from Google Play was downloaded using the apkcombo.com tool.
+Both APK files were uploaded to VirusTotal to check for any differences in permissions between the two versions of the application.
+Anything VirusTotal had marked anything as malicious, was noted.
+This was up to the discretion of every individual team member to decide if they decided to work on the chosen application for the duration of the project.
 
 \subsection{Behavior analysis}
 
-The research required that each team member has one application to examine. This had been done on a virtual computer with android studio installed or locally. During the installation of the application the network traffic had been captured. This had been done using Wireshark and mitmproxy. The network traffic was not relevant for behavior analysis but was captured as part of the network analysis.
+The research required that each team member has one application to examine.
+This had been done on a virtual computer with android studio installed or locally.
+During the installation of the application the network traffic had been captured.
+This had been done using Wireshark and mitmproxy.
+The network traffic was not relevant for behavior analysis but was captured as part of the network analysis.
 
-The behavior research had been predominantly about using the application and noting anything out of the ordinary. This had also been compared step by step to the original (non-malicious) application. The differences between the two are noted for further investigative purposes. The ordinary behavior had been investigated further during network and code analysis.
+The behavior research had been predominantly about using the application and noting anything out of the ordinary.
+This had also been compared step by step to the original (non-malicious) application.
+The differences between the two are noted for further investigative purposes.
+The ordinary behavior had been investigated further during network and code analysis.
 
 \subsection{Network analysis}
 
-During the behavior analysis the network traffic from the application was captured using Wireshark and mitmproxy. In the network analysis this captured network traffic had been analyzed using a combination of Wireshark, mitmproxy and shodan.io. During the analysis anything that stood out like any IP addresses and or domain names were written down.
+During the behavior analysis the network traffic from the application was captured using Wireshark and mitmproxy.
+In the network analysis this captured network traffic had been analyzed using a combination of Wireshark, mitmproxy and shodan.io.
+During the analysis anything that stood out like any IP addresses and or domain names were written down.
 
-Shodan.io was used for analyzing the IP addresses and domain names found with Wireshark and mitmproxy. Wireshark and mitmproxy were able to reveal all the network traffic sent and received by the application. Shodan.io revealed the other functions of the servers and whether there are similar servers, perhaps from the same hosting provider.
+Shodan.io was used for analyzing the IP addresses and domain names found with Wireshark and mitmproxy.
+Wireshark and mitmproxy were able to reveal all the network traffic sent and received by the application.
+Shodan.io revealed the other functions of the servers and whether there are similar servers, perhaps from the same hosting provider.
 
 \subsection{Code analysis}
 
-For the code analysis, JadX and Dex2Jar were used to decompile the application. This created the opportunity to read the code. An attempt was made to analyze the code. Analyzing the code was very difficult due to obfuscation. Where possible it was documented whether the code was malicious or not.
+For the code analysis, JadX and Dex2Jar were used to decompile the application.
+This created the opportunity to read the code.
+An attempt was made to analyze the code.
+Analyzing the code was very difficult due to obfuscation.
+Where possible it was documented whether the code was malicious or not.
 
 \subsection{Process analysis}
-The Processes were analyzed to gain the insights that the research needs. The application had been started in the emulator of Android Studio. During the startup and use of the application, the Memory profiler had been used to monitor the memory usage of the application. All memory usage was documented and all peculiar behavior had been investigated further, to understand what had caused the suspicious behavior. Optionally, a heap dump was done during execution, which led to interesting findings.
+The Processes were analyzed to gain the insights that the research needs.
+The application had been started in the emulator of Android Studio.
+During the startup and use of the application, the Memory profiler had been used to monitor the memory usage of the application.
+All memory usage was documented and all peculiar behavior had been investigated further, to understand what had caused the suspicious behavior.
+Optionally, a heap dump was done during execution, which led to interesting findings.
 
 \subsection{Countermeasures and detection}
 
-To finalize the analysis, a YARA ruleset had been created for the application. All findings were documented into a report which was delivered to the team leader. These steps were performed by all the members. If an application needed additional steps this was declared at the start of the application chapter.
+To finalize the analysis, a YARA ruleset had been created for the application.
+All findings were documented into a report which was delivered to the team leader.
+These steps were performed by all the members.
+If an application needed additional steps this was declared at the start of the application chapter.
