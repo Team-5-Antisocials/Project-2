@@ -357,3 +357,4 @@ MigrationBackup/
 *.fdb_latexmk
 *.synctex.gz
 *.pdf
+*.out
