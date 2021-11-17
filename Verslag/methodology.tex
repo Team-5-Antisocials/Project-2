@@ -39,7 +39,7 @@ The ordinary behavior was investigated further during network and code analysis.
 During the behavior analysis the network traffic from the application was captured using Wireshark and mitmproxy.
 During the network analysis this captured network traffic was analyzed using a combination of Wireshark, mitmproxy and shodan.io.
 Wireshark was used to capture all network data that has been sent by the application and gave the opertunity to perform a deep analysis what exactly was sent.
-Mitmproxy was used to capture all http and https requests, this was used to find what IP-addresses a connection was made to.
+Mitmproxy was used to capture all http and https requests, this was used to find what IP-addresses connections were made to.
 During the analysis anything that stood out like any IP addresses and or domain names were written down.
 
 Shodan.io was used for analyzing the IP addresses and domain names found with Wireshark and mitmproxy.
@@ -65,7 +65,7 @@ Optionally, a heap dump was done during execution, which led to interesting find
 \subsection{Countermeasures and detection}
 
 To finalize the analysis, a YARA ruleset had been created for the application.
-And ways the user of the application can mitigate the effect of the malicious code. 
+To inform end users, methods have been documented that the end user can apply to mitigate the effects of the malicious code.
 All findings were documented into a report which was delivered to the team leader.
 These steps were performed by all the members.
 If an application needed additional steps this was declared at the start of the application chapter.
