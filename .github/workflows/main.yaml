@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Get all changes from github"
+        uses: actions/checkout@v2
+
+      - name: Compile latex
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: Verslag/verslag.tex
+          latexmk_use_lualatex: true
+        
+      - name: "Release"
+        uses: softprops/action-gh-release@v1
+        with:
+          files: Verslag/verslag.pdf
+          
+
+
