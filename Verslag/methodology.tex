@@ -38,6 +38,8 @@ The ordinary behavior had been investigated further during network and code anal
 
 During the behavior analysis the network traffic from the application was captured using Wireshark and mitmproxy.
 In the network analysis this captured network traffic had been analyzed using a combination of Wireshark, mitmproxy and shodan.io.
+Wireshark was used to capture all network data that has been sent by the application and gave the opertunity to perform a deep analysis what exactly was sent.
+Mitmproxy was used to capture all http and https requests, this was used to find what IP-addresses a connection was made to.
 During the analysis anything that stood out like any IP addresses and or domain names were written down.
 
 Shodan.io was used for analyzing the IP addresses and domain names found with Wireshark and mitmproxy.
