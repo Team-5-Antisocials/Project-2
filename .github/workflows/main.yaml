@@ -15,14 +15,15 @@ jobs:
       - name: Compile latex
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: Verslag/verslag.tex
+          root_file: verslag.tex
           latexmk_use_lualatex: true
+          working_directory: Verslag
         
       - name: "Release"
         uses: softprops/action-gh-release@v1
         with:
           files: Verslag/verslag.pdf
-          working_directory: Verslag
+          
           
 
 
