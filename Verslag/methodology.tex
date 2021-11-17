@@ -22,7 +22,7 @@ Shodan.io was used for analyzing the IP addresses and domain names found with Wi
 
 \subsection{Code analysis}
 
-For the code analysis, JadX and Dex2Jar were used to decompile the application. This created the opportunity to read the code. An attempt was made to analyze the code. Analyzing the code was very difficult due to obfuscation. Where possible it was documented whether the code was malicious or not.
+For the code analysis, JadX and Dex2Jar were used to decompile the application. Both of these applications were used since it is useful to review the code using both of the applications. This would allow us to double check the code and make sure the decompiled APK's code is accurate. Analyzing the code was very difficult due to obfuscation. Where possible it was documented whether the code was malicious or not.
 
 \subsection{Process analysis}
 The Processes were analyzed to gain the insights that the research needs. The application had been started in the emulator of Android Studio. During the startup and use of the application, the Memory profiler had been used to monitor the memory usage of the application. All memory usage was documented and all peculiar behavior had been investigated further, to understand what had caused the suspicious behavior. Optionally, a heap dump was done during execution, which led to interesting findings.
