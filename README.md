@@ -17,7 +17,7 @@ If it does not auto complete just set it to:
             "lualatexmk"
         ]
     }
-}
+]
 
 ```
 
