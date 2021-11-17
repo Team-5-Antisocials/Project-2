@@ -19,10 +19,11 @@ jobs:
           latexmk_use_lualatex: true
           working_directory: Verslag
         
-      - name: "Release"
-        uses: softprops/action-gh-release@v1
+      - name: "Upload artifact"
+        uses: actions/upload-artifact@v2
         with:
-          files: Verslag/verslag.pdf
+          name: PDF
+          path: Verslag/verslag.pdf
           
           
 
