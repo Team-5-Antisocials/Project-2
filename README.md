@@ -22,3 +22,11 @@ If it does not auto complete just set it to:
 ```
 
 Roboto should be installed on your computer. If it is not you can download it [here](https://fonts.google.com/specimen/Roboto#standard-styles).
+
+## Contributing
+
+When contributing make a branch for the thing you're doing, e.g. adding your own app to the documentation. Then create a pull request, this way it is easier to suggest changes, etc.
+
+Make sure that what you're adding takes only one or two lines in the main file 'Verslag/verslag.tex'. You can accomplish this by using `\include{file}` or `\input{file}` and puttin the rest of your content in a seperate file.
+
+If you're proposing style changes you can of course do these in the main file.
