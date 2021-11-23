@@ -1,0 +1,17 @@
+\subsection{Behavior analysis}
+
+When the malicious application was opened it showed a popup telling the user that the malicious application required accessability features to be turned on.
+It also, gave instructions on how to turn the accessability features on.
+After clicking OK it opens settings on the page where the accessability features can be turned on. 
+When the accessability features were turned on the malicious application took over, closed all the prompts given by the settings page and brought the user back to the malicious application.
+
+Inside the malicious application a new popup was waiting, this one told the user to give the malicious application notification access. After pressing okay it again opened the settings, but this time on the notification settings page. After granting the application these permissions it again closes all prompts. 
+This time however it closed the malicious application as well.
+When the malicious application closed a popup appeared telling the user that the malicious application kept stopping.
+However, the application was still present in the application tray.
+
+When the application was clicked on inside the application tray it redirected the user to the Google Play Page of the legitimate \href{https://play.google.com/store/apps/details?id=com.dhl.exp.dhlmobile&hl=en&gl=US}{DHL application}.
+The url was the same as the original application found earlier, with language parameters added.
+If the application was closed inside the application tray and then again reopened via the shortcut created after installing it also redirected to the same page.
+
+
