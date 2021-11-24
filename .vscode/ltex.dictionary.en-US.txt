@@ -5,3 +5,9 @@ EOT
 logicmanBOT
 Koodous
 YARA
+Weverink
+Jordy
+Wolcken
+Bieze
+AMRO
+JadX
