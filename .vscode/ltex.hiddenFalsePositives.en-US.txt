@@ -2,3 +2,4 @@
 {"rule":"MISSING_GENITIVE","sentence":"^\\QWireshark analysis.\\E$"}
 {"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QIn this case however, it only returned a single ) with the Unicode character, EOT (End of transmission).\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThe request also included a chatid, according to the documentation this parameter defined in what chat the message had to be sent.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThe application seemed to create a lot of errors, most of the errors were SocketTimeoutExceptions\\E$"}
