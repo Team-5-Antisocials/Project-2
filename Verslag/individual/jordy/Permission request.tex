@@ -1,0 +1,124 @@
+\subsubsubsection{Security vendor flags}
+VirusTotal indicated that the malicious application was marked as malicious by 25 out of 61 security vendors. In the table under this paragraph all flags are described.
+
+\begin{tabular}{|l|l|}
+    \hline
+    \textbf{Security vendor} & \textbf{Flag}                        \\ \hline
+    AegisLab                 & Trojan.AndroidOS.Agent.C!c           \\ \hline
+    AhnLab-V3                & Trojan/Android.Agent.449065          \\ \hline
+    Avast                    & Android:Agent-RSY {[}Trj{]}          \\ \hline
+    Avast-Mobile             & Android:Evo-gen {[}Trj{]}            \\ \hline
+    AVG                      & Android:Agent-RSY {[}Trj{]}          \\ \hline
+    BitDefenderFalx          & Android.Trojan.SpyAgent.P            \\ \hline
+    CAT-QuickHeal            & Android.Agent.ADV                    \\ \hline
+    Comodo                   & Malware@\#2ldj5q9ll943m              \\ \hline
+    Cyren                    & AndroidOS/Trojan.GMOM-2              \\ \hline
+    DrWeb                    & Android.Spy.516.origin               \\ \hline
+    ESET-NOD32               & A Variant Of Android/Spy.Agent.BAY   \\ \hline
+    F-Secure                 & Malware.ANDROID/SMSAgent.FHAL.Gen    \\ \hline
+    Fortinet                 & Android/Agent.AZF!tr.spy             \\ \hline
+    K7GW                     & Spyware ( 00516e5c1)                 \\ \hline
+    Kaspersky                & HEUR:Trojan-Spy.AndroidOS.Agent.vp   \\ \hline
+    McAfee                   & ANDROID/Spy.d                        \\ \hline
+    McAfee-GW-Edition        & ANDROID/Spy.d                        \\ \hline
+    Microsoft                & Trojan:AndroidOS/Spynote.B!MTB       \\ \hline
+    NANO-Antivirus           & Trojan.Android.Hidden.estanm         \\ \hline
+    Sangfor Engine Zero      & Malware.Android-Script.Save.dc318d22 \\ \hline
+    Sophos                   & Andr/Xgen2-EQ                        \\ \hline
+    Symantec Mobile Insight  & Trojan:Malapp                        \\ \hline
+    Trustlook                & Android.Malware.General (score:9)    \\ \hline
+    Yandex                   & Trojan.Mober.bTTGwd.156              \\ \hline
+    ZoneAlarm by Check Point & HEUR:Trojan-Spy.AndroidOS.Agent.vp   \\ \hline
+\end{tabular}
+
+These flags from the different security vendors clearly indicate that the malicious application is in fact malicious and most likely a Trojan. A Trojan is a blanket term for malicious software that disguises itself as a harmless application.
+\newpage
+\subsubsubsection{Permission requests}
+Every application asks for permission when you install it on a phone. In the following 3 subchapters the permissions that the official and malicious applications asked for are described.
+\subsubsubsection{Malicious application permissions}
+The malicious application asked for the following permissions:
+
+\texttt{android.permission.PROCESS\_OUTGOING\_CALLS}
+\newline \texttt{android.permission.ACCESS\_COARSE\_LOCATION}
+\newline \texttt{android.permission.BLUETOOTH}
+\newline \texttt{android.permission.INTERNET}
+\newline \texttt{android.permission.WRITE\_CONTACTS}
+\newline \texttt{android.permission.SEND\_SMS}
+\newline \texttt{android.permission.WRITE\_CALL\_LOG}
+\newline \texttt{android.permission.READ\_CALL\_LOG}
+\newline \texttt{com.android.browser.permission.READ\_HISTORY\_BOOKMARKS}
+\newline \texttt{android.permission.WRITE\_EXTERNAL\_STORAGE}
+\newline \texttt{android.permission.RECORD\_AUDIO}
+\newline \texttt{android.permission.ACCESS\_FINE\_LOCATION}
+\newline \texttt{android.permission.CALL\_PHONE}
+\newline \texttt{android.permission.READ\_PHONE\_STATE}
+\newline \texttt{android.permission.READ\_SMS}
+\newline \texttt{android.permission.SYSTEM\_ALERT\_WINDOW}
+\newline \texttt{android.permission.CAMERA}
+\newline \texttt{android.permission.CHANGE\_WIFI\_STATE}
+\newline \texttt{android.permission.RECEIVE\_SMS}
+\newline \texttt{android.permission.READ\_CONTACTS}
+\newline \texttt{android.permission.INSTALL\_PACKAGES}
+\newline \texttt{android.permission.ACCESS\_WIFI\_STATE}
+\newline \texttt{android.permission.SET\_WALLPAPER\_HINTS}
+\newline \texttt{android.permission.ACCESS\_NETWORK\_STATE}
+\newline \texttt{android.permission.SET\_WALLPAPER}
+\newline \texttt{android.permission.READ\_EXTERNAL\_STORAGE}
+\newline \texttt{android.permission.RECEIVE\_BOOT\_COMPLETED}
+\newline \texttt{android.permission.WRITE\_SETTINGS}
+\newline \texttt{android.permission.VIBRATE}
+\newline \texttt{android.permission.KILL\_BACKGROUND\_PROCESSES}
+\newline \texttt{android.permission.WAKE\_LOCK}
+\newline \texttt{android.permission.GET\_ACCOUNTS}
+
+A lot of these permissions are not usually asked for by an internet browser. A in depth comparison of the differences between the applications permissions was described in detail in chapter 4.1.2.3.
+\newpage
+\subsubsubsection{Official application permissions}
+The official application asked for the following permissions:
+
+\texttt{android.permission.READ\_EXTERNAL\_STORAGE }
+\newline \texttt{android.permission.WRITE\_EXTERNAL\_STORAGE }
+\newline \texttt{android.permission.USE\_BIOMETRIC }
+\newline \texttt{android.permission.RECEIVE\_BOOT\_COMPLETED}
+\newline \texttt{android.permission.USE\_FINGERPRINT }
+\newline \texttt{android.permission.ACCESS\_WIFI\_STATE}
+\newline \texttt{com.android.launcher.permission.INSTALL\_SHORTCUT }
+\newline \texttt{com.google.android.c2dm.permission.RECEIVE}
+\newline \texttt{com.google.android.finsky.permission.BIND\_GET\_INSTALL\_REFERRER\_SERVICE}
+\newline \texttt{android.permission.MODIFY\_AUDIO\_SETTINGS }
+\newline \texttt{android.permission.DOWNLOAD\_WITHOUT\_NOTIFICATION}
+
+A in depth comparison of the differences between the applications permissions was described in detail in chapter 4.1.2.3.
+\newpage
+\subsubsubsection{Differences between permissions}
+The malicious application asked for the following permissions that the official application did not ask for:
+
+\texttt{android.permission.PROCESS\_OUTGOING\_CALLS}
+\newline \texttt{android.permission.ACCESS\_COARSE\_LOCATION}
+\newline \texttt{android.permission.BLUETOOTH}
+\newline \texttt{android.permission.INTERNET}
+\newline \texttt{android.permission.WRITE\_CONTACTS}
+\newline \texttt{android.permission.SEND\_SMS}
+\newline \texttt{android.permission.WRITE\_CALL\_LOG}
+\newline \texttt{android.permission.READ\_CALL\_LOG}
+\newline \texttt{com.android.browser.permission.READ\_HISTORY\_BOOKMARKS}
+\newline \texttt{android.permission.RECORD\_AUDIO}
+\newline \texttt{android.permission.ACCESS\_FINE\_LOCATION}
+\newline \texttt{android.permission.CALL\_PHONE}
+\newline \texttt{android.permission.READ\_PHONE\_STATE}
+\newline \texttt{android.permission.READ\_SMS}
+\newline \texttt{android.permission.SYSTEM\_ALERT\_WINDOW}
+\newline \texttt{android.permission.CAMERA}
+\newline \texttt{android.permission.CHANGE\_WIFI\_STATE}
+\newline \texttt{android.permission.RECEIVE\_SMS}
+\newline \texttt{android.permission.READ\_CONTACTS}
+\newline \texttt{android.permission.INSTALL\_PACKAGES}
+\newline \texttt{android.permission.SET\_WALLPAPER\_HINTS}
+\newline \texttt{android.permission.ACCESS\_NETWORK\_STATE}
+\newline \texttt{android.permission.SET\_WALLPAPER}
+\newline \texttt{android.permission.WRITE\_SETTINGS}
+\newline \texttt{android.permission.VIBRATE}
+\newline \texttt{android.permission.KILL\_BACKGROUND\_PROCESSES}
+\newline \texttt{android.permission.WAKE\_LOCK}
+\newline \texttt{android.permission.GET\_ACCOUNTS}
+
