@@ -2,10 +2,7 @@
 
 <should include application name, version numbers, apk size>
 
-\newpage
-\subsection{VirusTotal summary}
-
-<should include, how many times marked malicious, package name and any other interesting things>
+\include{individual/tim/virustotal.tex}
 
 \subsubsection{Permission requests}
 
@@ -59,6 +56,7 @@
 
 <What to do if it is installed>
 
+\newpage
 \subsubsection{YARA rule set}
+\lstinputlisting[language=YARA]{individual/tim/ruleset.yara}
 
-<A YARA rule set created based on your findings>
