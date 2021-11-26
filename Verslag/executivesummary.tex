@@ -10,3 +10,11 @@ The code analyses of both applications did seem to show differences, but not one
 All of this would lead an outside observer to believe that the malicious application is not really all that malicious, but rather the result of a hobbyist who likes to tinker with popular apps in his or her free time.
 Anybody who would like a fully completed version of an application could then go to his website and download the APK file.
 It is safe to say after all these findings that there are not only malicious hackers, but also benevolent ones.
+
+The seemingly innocent DHL application turned out to be very malicious.
+VirusTotal indicated that 33/63 security vendors marked the application as malicious.
+Most of them indicated that the application was either a Trojan or a Banker.
+The application itself had a background of the original application, then proceeded to ask for a lot of permissions.
+After which, it redirected to the original DHL application.
+The network analysis indicated that the application was sending messages to a telegram user, \texttt{L0gicMan}, using the telegram API.
+A more thorough analysis of the code revealed that the application could hack not only almost every bank, but also some crypto wallets and email clients.
