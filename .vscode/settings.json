@@ -4,6 +4,7 @@
         "Jayden",
         "Jordy",
         "Koodous",
+        "mitmproxy",
         "shodan",
         "Weverink",
         "Wolcken",
@@ -60,4 +61,6 @@
             ]
         }
     ],
+    "languageTool.language": "en",
+    "languageTool.enabled": true
 }
