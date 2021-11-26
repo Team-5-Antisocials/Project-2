@@ -1,0 +1,22 @@
+\subsection{Code analysis}
+
+The malicious code was successfully decompiled using JadX, there were quite a lot of elements it was not able to decompile.
+However, it seemed like the most important parts were intact. 
+The code was obfuscated. The connection between classes was impossible to determine.
+However, there were still a lot of useful strings and android interactions.
+
+One of the interesting strings existed in two files, \texttt{sources/d/e/a/b.java} and \texttt{sources/d/c/a/b/a.java}.
+The strings contained the domain that requests were being sent to, \texttt{https://api.telegram.org/bot}.
+This indicated that the application really was making requests to Telegram.
+
+There was a file that was a lot more interesting, however, \texttt{sources/d/e/a/e.java}.
+This file contained a long list of package names, which on a first quick glance looked like package names for popular crypto banking applications.
+After some investigating it not only contained crypto banking applications but also regular banking applications and email clients.
+It even included Dutch banks such as IGN, ABN AMRO and a few others. 
+
+A list of all the applications in the list can be found in Table \ref{rafael-hackeableapps} included at the end of this section.
+Some further investigation indicated that the application was attempting to steal data from these applications and send it somewhere.
+It can be assumed that it again sends the data to telegram. However, it was near impossible to find in the code whether this was actually the case.
+
+\newpage
+\input{individual/rafael/allbanks.tex}

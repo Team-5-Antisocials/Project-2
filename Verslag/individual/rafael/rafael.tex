@@ -1,64 +1,15 @@
-\section{<application name> Application Analysis by Rafael}
+\section{'DHL Express Mobile' Application Analysis by Rafael}
 
-<should include application name, version numbers, apk size>
+The application that was analyzed in this chapter had the name 'DHL'.
+The application was found on \href{https://koodous.com/apks/38ff459a46e9ea6d63a83c1eddb640626fef562cd1bcb0ab3823c4770d07d0fb}{Koodous} with the version \texttt{1.0} and package name \texttt{com.ru.dhl}, the size was \texttt{2.7 MB}.
+The same package name did not exist on the Google Play Store. However, an application with the same icon was found \href{https://play.google.com/store/apps/details?id=com.dhl.exp.dhlmobile}{here}. It has the version \texttt{2.7.0}, package name \texttt{com.dhl.exp.dhlmobile} and a size of \texttt{25 MB}.
 
-\newpage
-\subsection{VirusTotal summary}
+The application found on Koodous and the application found on the Google Play Store will hereinafter be referred to as 'Malicious application' and 'Original application' respectively.
 
-<should include, how many times marked malicious, package name and any other interesting things>
-
-\subsubsection{Permission requests}
-
-<permissions requested by the app (can be found on virus total)>
-
-\newpage
-\subsection{Behavior analysis}
-
-<what does the app behave like when installed and ran>
-
-\newpage
-\subsection{Network analysis}
-
-<what does the network traffic look like>
-
-\subsubsection{HTTP proxy analysis}
-
-<what did the proxy reveal about the network traffic>
-
-\subsubsection{Wireshark analysis}
-
-<what did WireShark reveal about the network traffic>
-
-\subsubsection{Reconnaissance [optional]}
-
-<what was found using shodan.io>
-
-\newpage
-\subsection{Code analysis}
-
-<interesting stuff found in code>
-
-\newpage
-\subsection{Process analysis}
-
-<interesting stuff found in the process and memory, etc.>
-
-\newpage
-\subsection{Countermeasures and detection}
-
-\subsubsection{Preventive measures}
-
-
-<Measures to prevent installing this application>
-
-\subsubsection{Detective measures}
-
-<Measures to detect if this application is installed>
-
-\subsubsection{Reactive measures}
-
-<What to do if it is installed>
-
-\subsubsection{YARA rule set}
-
-<A YARA rule set created based on your findings>
+\include{individual/rafael/virustotal.tex}
+\include{individual/rafael/permissions.tex}
+\include{individual/rafael/behavior.tex}
+\include{individual/rafael/network.tex}
+\include{individual/rafael/codeanalysis.tex}
+\include{individual/rafael/processanalysis.tex}
+\include{individual/rafael/countermeasures.tex}
