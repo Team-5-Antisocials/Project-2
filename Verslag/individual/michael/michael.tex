@@ -1,6 +1,6 @@
 \section{Doodle Jump 2 Application Analysis by Michael}
 
-The following research has been done for the video game application ‘Doodle Jump 2’, downloaded from the Google Play Store. The package name of the official version is ‘com.limasky.doodlejump2’. The malicious version of this game was downloaded from Koodous. The version of the app that has been researched is 1.4.7. Remarkably, the legitimate version of this application is smaller than the malicious version. The real APK being 47,8MB in size and the modified APK being 36,47MB.
+The following research has been done for the video game application ‘Doodle Jump 2’, downloaded from the Google Play Store. The package name of the official version is ‘com.limasky.doodlejump2’. The malicious version of this game was downloaded from Koodous. The version of the app that has been researched is 1.4.7. Remarkably, the legitimate version of this application is smaller than the malicious version. The real APK being 47,8MB in size and the modified APK being 36,47MB. The legitimate application can be found on: \url{https://play.google.com/store/apps/details?id=com.limasky.doodlejump2}. The malicious version is on koodous, the link being: \url{https://koodous.com/apks/c55f01d1e6039394f09d613ffe4fcff6443e421aee737bdc058bfe753b6b0099}.
 \subsection{VirusTotal summary}
 
 
@@ -280,36 +280,10 @@ If the application is already installed it is recommended to remove it. Whatever
 \subsubsection{YARA rule set}
 
 A simple way to filter this application is to create a YARA rule that detects if the string “www.farsroid.com” is present, and to specifically filter this app it is also useful to declare that the application size is below 40MB. Since the malicious version is smaller than the official one, and the official version is likely going to add updates such as extra levels or limited time events, the real app is likely to only get bigger. However, this condition could easily be removed so that the only requirement is that the string “www.farsroid.com” is present, to filter all apps made by this malicious developer.
-\begin{verbatim}
 
-rule filterfarsroidapps1
-{
-    meta:
-        description = “Filter farsroid apps under 40MB”
-        author = “Michael Francis”
-        date = “2021/11/24”
-    strings:
-        $text_string_1 = "www.farsroid.com"
-    condition:
-        $text_string_1 and filesize < 40MB
-}
-
-\end{verbatim}
+\lstinputlisting[language=YARA]{individual/michael/ruleset1.yar}
 
 Or alternatively the filter without the size requirement:
-\begin{verbatim}
 
-rule filterfarsroidapps2
-{
-    meta:
-        description = “Filter farsroid apps”
-        author = “Michael Francis”
-        date = “2021/11/24”
-    strings:
-        $text_string_1 = "www.farsroid.com"
-    condition:
-        $text_string_1
-}
-
-\end{verbatim}
+\lstinputlisting[language=YARA]{individual/michael/ruleset2.yar}
 
