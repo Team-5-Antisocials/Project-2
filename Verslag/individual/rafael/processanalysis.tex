@@ -1,0 +1,11 @@
+\subsection{Process analysis}
+
+For the process analysis the logs the application made during execution were captured.
+The logs displayed the results from telegram, a lot of errors and any popups the application made.
+The logs reconfirmed any previous thoughts about the application contacting telegram.
+The application seemed to create a lot of errors, most of the errors were \texttt{SocketTimeoutException}s, they indicated that the read operation timed out.
+Sadly, this information was not very useful.
+
+The memory was also profiled, which made it quite apparent that a lot of strings were being allocated.
+Sadly, android studio did not make a heap dump available, thus the contents of the strings could not be read.
+The application used quite a lot of memory, with an \texttt{81 MB} peak usage.
