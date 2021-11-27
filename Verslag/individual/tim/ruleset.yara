@@ -1,4 +1,4 @@
-rule basicrule {
+rule Chrome {
     meta:
         description = "Ruleset for project 2 Tim individual component chrome app ef613e042afafb955baedc75033f6ff73d19a795ae7f541981dfe624bc700887.apk"
     strings:
