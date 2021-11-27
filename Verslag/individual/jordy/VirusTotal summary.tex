@@ -1,8 +1,12 @@
 \subsection{VirusTotal summary}
-The selected malicious application was checked on VirusTotal for a first overview of the application. On this website it is possible to see if security vendors flag this application as malicious, what permissions the application asks for, the package name and many more aspects of the application. With this information both of the applications were compared with each other. In this chapter the process and results are described.
+The selected malicious application was checked on VirusTotal for a first overview of the application.
+On this website it is possible to see if security vendors flag this application as malicious, what permissions the application asks for, the package name and many more aspects of the application.
+With this information both of the applications were compared with each other.
+In this chapter the process and results are described.
 
 \subsubsection{Security vendor flags}
-VirusTotal indicated that the malicious application was marked as malicious by 25 out of 61 security vendors. In the table under this paragraph all flags are described.
+VirusTotal indicated that the malicious application was marked as malicious by 25 out of 61 security vendors.
+In the table under this paragraph all flags are described.
 
 \begin{tabular}{|l|l|}
     \hline
@@ -34,10 +38,12 @@ VirusTotal indicated that the malicious application was marked as malicious by 2
     ZoneAlarm by Check Point & HEUR:Trojan-Spy.AndroidOS.Agent.vp   \\ \hline
 \end{tabular}
 
-These flags from the different security vendors clearly indicate that the malicious application is in fact malicious and most likely a Trojan. A Trojan is a blanket term for malicious software that disguises itself as a harmless application.
+These flags from the different security vendors clearly indicate that the malicious application is in fact malicious and most likely a Trojan.
+A Trojan is a blanket term for malicious software that disguises itself as a harmless application.
 \newpage
 \subsubsection{Permission requests}
-Every application asks for permission when you install it on a phone. In this subchapter the permissions that the official and malicious applications asked for are described.
+Every application asks for permission when you install it on a phone.
+In this subchapter the permissions that the official and malicious applications asked for are described.
 \subsubsubsection{Malicious application permissions}
 The malicious application asked for the following permissions:
 
@@ -74,7 +80,8 @@ The malicious application asked for the following permissions:
 \newline \texttt{android.permission.WAKE\_LOCK}
 \newline \texttt{android.permission.GET\_ACCOUNTS}
 
-A lot of these permissions are not usually asked for by an internet browser. A in depth comparison of the differences between the applications permissions was described in detail in chapter 4.1.2.3.
+A lot of these permissions are not usually asked for by an internet browser.
+A in depth comparison of the differences between the applications permissions was described in detail in chapter 4.1.2.3.
 \newpage
 \subsubsubsection{Official application permissions}
 The official application asked for the following permissions:
@@ -126,10 +133,12 @@ The malicious application asked for the following permissions that the official 
 \newline \texttt{android.permission.GET\_ACCOUNTS}
 
 \newpage
-There were a lot of interesting permission that the malicious application asked for that the official application did not ask for. Most of these permissions are never necessary for a web browser to have. The permissions were described in different groups.
+There were a lot of interesting permission that the malicious application asked for that the official application did not ask for.
+Most of these permissions are never necessary for a web browser to have. The permissions were described in different groups.
 
 \textbf{Calls, SMS, accounts and contacts:}
-A web browser would never need to have access to a call log, any of your accounts, contacts or SMS messages. There would also never be a need for Firefox to make a phone call or send a SMS message on its own.
+A web browser would never need to have access to a call log, any of your accounts, contacts or SMS messages.
+There would also never be a need for Firefox to make a phone call or send a SMS message on its own.
 
 \texttt{android.permission.PROCESS\_OUTGOING\_CALLS}
 \newline \texttt{android.permission.WRITE\_CONTACTS}
@@ -143,7 +152,12 @@ A web browser would never need to have access to a call log, any of your account
 \newline \texttt{android.permission.GET\_ACCOUNTS}
 
 \textbf{Bluetooth, network and Location:}
-A web browser like Firefox has no need for Bluetooth permissions. Furthermore no application should need to access or change the Wi-Fi state of a phone. A connection with the internet should have been enough. The application should never have asked for access to location at all times. This permission might get asked by a very select few websites. This does not mean a internet browser needs to have this permission when it gets installed. 
+A web browser like Firefox has no need for Bluetooth permissions.
+Furthermore no application should need to access or change the Wi-Fi state of a phone.
+A connection with the internet should have been enough.
+The application should never have asked for access to location at all times.
+This permission might get asked by a very select few websites.
+This does not mean a internet browser needs to have this permission when it gets installed. 
 
 \texttt{android.permission.BLUETOOTH}
 \newline \texttt{android.permission.INTERNET}
@@ -154,7 +168,8 @@ A web browser like Firefox has no need for Bluetooth permissions. Furthermore no
 
 \textbf{Audio and video:}
 
-A web browser would only need to have access to your camera or microphone when someone would be on a website like zoom. It should have never asked for these permissions during the installation. 
+A web browser would only need to have access to your camera or microphone when someone would be on a website like zoom.
+It should have never asked for these permissions during the installation. 
 
 \texttt{android.permission.CAMERA}
 \newline \texttt{android.permission.RECORD\_AUDIO}
@@ -162,7 +177,10 @@ A web browser would only need to have access to your camera or microphone when s
 \newpage
 \textbf{Phone functions:}
 
-Most of these permissions are permissions that no web browser would ever need. The install packages, write settings and kill background processes are a few examples of unnecessary permissions that could ruin your Android OS when the wrong applications use them. An example of a not harmful but unnecessary permission was the vibrate permission. Firefox would never need to have access to that permission.
+Most of these permissions are permissions that no web browser would ever need.
+The install packages, write settings and kill background processes are a few examples of unnecessary permissions that could ruin your Android OS when the wrong applications use them.
+An example of a not harmful but unnecessary permission was the vibrate permission.
+Firefox would never need to have access to that permission.
 
 \texttt{android.permission.READ\_PHONE\_STATE}
 \newline \texttt{android.permission.SYSTEM\_ALERT\_WINDOW}
@@ -175,7 +193,8 @@ Most of these permissions are permissions that no web browser would ever need. T
 \newline \texttt{android.permission.WAKE\_LOCK}
 
 \subsubsection{Relations}
-On the VirusTotal website it was shown that the malicious application has made a connection to two IP addresses. These IP addresses are:
+On the VirusTotal website it was shown that the malicious application has made a connection to two IP addresses.
+These IP addresses are:
 
 \texttt{3.134.39.220}
 \newline \texttt{3.14.182.203}
