@@ -10,6 +10,7 @@
 \usepackage{tabularray}
 \usepackage{listings}
 \usepackage{tabularx}
+\usepackage[final]{pdfpages}
 
 \hypersetup{
     colorlinks,
@@ -44,14 +45,17 @@
   tabsize=3
 }
 
+
 % \bibliographystyle{6}
 \begin{document}
+
+\includepdf{voorpagina.pdf}
 
 \begin{titlepage}
   \centering
     \vfill
     {\bfseries\Huge
-	    Scope \& Methodology
+      Android malware analysis
         \vskip2cm
       }
       {\bfseries\Large

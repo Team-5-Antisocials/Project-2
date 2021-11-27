@@ -356,5 +356,6 @@ MigrationBackup/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
-*.pdf
+**/out/*.pdf
 *.out
+*.afphoto
