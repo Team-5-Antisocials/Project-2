@@ -1,9 +1,9 @@
 \subsection{Process analysis}
 
-Analyzing the application proved quite difficult, it seemed to have be able to undermine the android profiler options.  
-Android API version 23 without the google API’s seemed to the only one to able to profile and run the app after trying multiple android versions. 
+Analyzing the application proved to be quite difficult, it seemed to have been able to undermine the Android profiler options.  
+Android API version 23 without the Google API’s seemed to be the only one able to profile and run the app after trying multiple Android versions. 
 
-The application would steadily run at 88 MB somtimes dipping to 80 MB’s and spiking to 90 MB’s. 
+The application would steadily run at 88 MB sometimes dipping to 80 MB’s and spiking to 90 MB’s. 
 The CPU usage was more prone to spiking and dipping from the low 20\% to spikes of around the 50\% CPU usage. 
 The app would generally stay around the 33\% CPU usage.
 
@@ -13,6 +13,6 @@ The app would generally stay around the 33\% CPU usage.
     \label{tim-process}
 \end{figure}
 
-As seen on figure \ref{tim-process} the application would also periodically send and receive packets via the internet, communicating with the Cloudflare IP. 
-The app would however crash after trying to enable the chrome in the settings menu when it was being profiled. 
+As seen on figure \ref{tim-process} it would seem that the application periodically send and received packets via the internet, communicating with the Cloudflare IP. 
+The app would however crash after trying to enable the Chrome in the settings menu when it was being profiled. 
 This would not occur when the app is run normally without a profiler active. 
