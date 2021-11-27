@@ -3,3 +3,5 @@
 {"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QIn this case however, it only returned a single ) with the Unicode character, EOT (End of transmission).\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThe request also included a chatid, according to the documentation this parameter defined in what chat the message had to be sent.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThe application seemed to create a lot of errors, most of the errors were SocketTimeoutExceptions\\E$"}
+{"rule":"EN_WORD_COHERENCY","sentence":"^\\QThe code analyses revealed that the application creators often did not have good OPSEC skills and their obfuscation would be critically flawed in the most important places.\\E$"}
+{"rule":"QUESTION_MARK","sentence":"^\\QWhat did happen during this analysis is that a pop-up was displayed with a message in Arabic.\\E$"}
