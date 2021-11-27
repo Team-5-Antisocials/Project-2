@@ -1,6 +1,11 @@
-\section{<application name> Application Analysis by Tim}
+\section{'Chrome' Application Analysis by Tim}
 
-<should include application name, version numbers, apk size>
+The application analyzed in this chapter was an malicious app name Chrome.
+This application was found on \href{https://koodous.com/apks/ef613e042afafb955baedc75033f6ff73d19a795ae7f541981dfe624bc700887}{Koodous} 
+on version \texttt{1.0} with package name \texttt{com.effectiveness.celebration} and size \texttt{2.6 MB}.
+The actual \href{https://play.google.com/store/apps/details?id=com.android.chrome&hl=en&gl=US}{Chrome} application varies in version and size. 
+For testing purposes the version on \href{https://apkcombo.com/nl/chrome/com.android.chrome/}{APK-Combo} was used.
+This Chrome is on version \texttt{96.0.4664.45} with the package name \texttt{com.android.chrome} and size \texttt{195 MB}.
 
 \include{individual/tim/virustotal.tex}
 
@@ -10,43 +15,12 @@
 
 \include{individual/tim/network.tex}
 
-\subsubsection{HTTP proxy analysis}
+\include{individual/tim/codeanalysis.tex}
 
-<what did the proxy reveal about the network traffic>
+\include{individual/tim/processanalysis.tex}
 
-\subsubsection{Wireshark analysis}
+\include{individual/tim/countermesures.tex}
 
-<what did WireShark reveal about the network traffic>
-
-\subsubsection{Reconnaissance [optional]}
-
-<what was found using shodan.io>
-
-\newpage
-\subsection{Code analysis}
-
-<interesting stuff found in code>
-
-\newpage
-\subsection{Process analysis}
-
-<interesting stuff found in the process and memory, etc.>
-
-\newpage
-\subsection{Countermeasures and detection}
-
-\subsubsection{Preventive measures}
-
-
-<Measures to prevent installing this application>
-
-\subsubsection{Detective measures}
-
-<Measures to detect if this application is installed>
-
-\subsubsection{Reactive measures}
-
-<What to do if it is installed>
 
 \newpage
 \subsubsection{YARA rule set}
