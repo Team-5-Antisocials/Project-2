@@ -19,3 +19,10 @@ The application itself had a background of the original application, then procee
 After which, it redirected to the original DHL application.
 The network analysis indicated that the application was sending messages to a telegram user, \texttt{L0gicMan}, using the telegram API.
 A more thorough analysis of the code revealed that the application could hack not only almost every bank, but also some crypto wallets and email clients.
+
+The Chrome application was a very recent detection with first having only 16/64 security vendor flags, later on changing to 24/64 flags. 
+It was marked by most of the vendors as a Banking Trojan or regular Trojan. 
+As soon as the application is installed it will ask the user to enable the app in the application settings giving it free reign over the phone. 
+The application will then keep running and not allow the user to uninstall the app. 
+It will periodically seek out a connection with a Cloudflare IP sending a Json file. 
+The app will also save the users settings and upload them to a local database. 
