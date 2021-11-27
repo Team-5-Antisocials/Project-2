@@ -1,11 +1,16 @@
 \subsection{Code analysis}
 
+A code analysis was done to reach a more thorough understanding of how the application functions.
+This chapter will describe the most interesting findings from the code analysis and the methods used to find them.
+
 The malicious code was successfully decompiled using JadX, there were quite a lot of elements it was not able to decompile.
 However, it seemed like the most important parts were intact. 
 The code was obfuscated. The connection between classes was impossible to determine.
 However, there were still a lot of useful strings and android interactions.
+A search using a regex that would match any domains and one that would match with IPs was done to find interesting strings.
+The regex for finding IPs resulted in no findings, however, the domain regex did find a lot.
 
-One of the interesting strings existed in two files, \texttt{sources/d/e/a/b.java} and \texttt{sources/d/c/a/b/a.java}.
+One of the interesting strings that was found with the domain regex existed in two files, \texttt{sources/d/e/a/b.java} and \texttt{sources/d/c/a/b/a.java}.
 The strings contained the domain that requests were being sent to, \texttt{https://api.telegram.org/bot}.
 This indicated that the application really was making requests to Telegram.
 
