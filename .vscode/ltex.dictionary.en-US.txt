@@ -12,3 +12,6 @@ Bieze
 AMRO
 JadX
 Scherphof
+OPSEC
+AdWare
+apk-mitm
