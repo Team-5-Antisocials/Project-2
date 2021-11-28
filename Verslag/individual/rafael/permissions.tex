@@ -1,4 +1,7 @@
 \subsubsection{Permission requests}
+
+This chapter will describe the permissions requested by the malicious and original application.
+
 \subsubsubsection{Malicious application}
 The malicious application requested the following permissions:
 
@@ -24,6 +27,8 @@ The malicious application requested the following permissions:
 \newline \texttt{android.permission.WAKE\_LOCK}
 \newline \texttt{android.permission.WRITE\_CALL\_LOG}
 \newline \texttt{android.permission.WRITE\_CONTACTS}
+
+There were definitely were some interesting permissions requested, for example the DHL application would under no circumstances need to read the contacts.
 
 \newpage
 \subsubsubsection{Original application}
@@ -53,3 +58,6 @@ The original application requested the following permissions:
 \newline \texttt{com.sonymobile.home.permission.PROVIDER\_INSERT\_BADGE}
 \newline \texttt{me.everything.badger.permission.BADGE\_COUNT\_READ}
 \newline \texttt{me.everything.badger.permission.BADGE\_COUNT\_WRITE}
+
+It was quite interesting to see how little of the permissions were common between the malicious and original application.
+This indicated that the malicious application was no repackaged.

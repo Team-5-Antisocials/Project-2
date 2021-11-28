@@ -1,0 +1,36 @@
+\subsection{Countermeasures and detection}
+
+In order to protect yourself against malicious applications it is paramount to have knowledge of how a malicious application would be able to sneak its way on a device. 
+This chapter will talk about how you can prevent getting hacked by this app, how you can spot that the application is malicious and what to do when it is installed.
+
+\subsubsection{Preventive measures}
+
+The best way to prevent unnecessary risks when installing applications is to download them directly from the Google Play Store. 
+This way you know that it has been checked and verified by Google. 
+This means that the app will have a very small chance of being malicious. 
+Especially since this app is made by Google itself you will have no problems with finding the original and safe version on the Google Play Store.
+
+\subsubsection{Detective measures}
+
+A good way to find out if you have a malicious version of Chrome is to check its size and version. 
+Most malicious software will have a low version number like either 1 or 2. 
+The official version of Chrome has differing versions per Android phone but it will most likely be in the million. 
+The size of the official Chrome app will also be somewhere around the 190MB to 200MB range. The malicious Chrome app is just 2.6MB. 
+
+Another good way is to check the package name, the official is com.android.chrome while the malicious is com.effectiveness.celebration. 
+It is not fool proof because the official app can be repackaged into a malicious version causing them to have the same package name.
+
+\subsubsection{Reactive measures}
+
+If the package has made its way onto your device the best course of action would be to remove it at once. 
+This should still be possible if the user has not given the app full access via enabling it in the application settings. 
+It would be hard to uninstall with constant popups immediately sending the user to application settings but it is possible. 
+If the user has enabled the application, the best way would be to factory reset it and completely wipe it clean.
+
+\newpage
+\subsubsection{YARA rule set}
+
+A YARA rule set is a way to automatically detect a specific application.
+The ruleset detailed below is a way to find the malicious Chrome application analyzed in this chapter using the classes.dex hex code.
+
+\lstinputlisting[language=YARA]{individual/tim/ruleset.yara}
