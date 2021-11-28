@@ -1,0 +1,38 @@
+\subsection{Countermeasures and detection}
+A part of malware analysis is coming up with countermeasures and ways to detect the application.
+The different countermeasures are described in this chapter.
+
+\subsubsection{Preventive measures}
+There were a few preventive measures a user could take to not install this malicious application.
+One of these was to only install applications that are on the official Google Play Store.
+The only Firefox application that is downloadable on the Google Play Store is the official application from Mozilla.
+This would mean that the malicious application is not able to be installed on an user’s phone via the Google Play Store.
+
+The other preventive measure was to install an antivirus software on a user’s phone.
+The antivirus software would flag the malicious application as malware and would give a notification or block the installation all together.
+
+\subsubsection{Detective measures}
+The best way to detect that the malicious application was installed was by checking the notification bar.
+The application always showed up in the notification bar as “FireFox” with “Browser” underneath it.
+When this notification was clicked on, it showed nothing.
+
+Another way to detect the malicious application is by looking in the settings app and checking the apps tab.
+In this part of settings all installed apps are shown.
+The malicious application said it was not installed but showed up in this list.
+This meant that the application was indeed installed.
+
+The last described detective measure is installing an antivirus software.
+Many security vendors including AVG AntiVirus showed on VirusTotal that the application was malicious.
+The antivirus software would indicate that the application is malicious and would give the user a warning.
+
+\subsubsection{Reactive measures}
+When the application is detected on a device it is important to immediately uninstall the application.
+With the permissions the application asks for it is possible that it send a lot of information to the command and control server and it could do a lot of damage to the Android installation on the phone.
+Since the malicious application has the permission to install packages it would be advised to check all installed apps and uninstall any apps the user does not know.
+The best solution would be to do a factory reset of the phone.
+
+\subsubsection{YARA rule set}
+A YARA rule set is intended to automatically find a specific group of applications.
+The designed YARA ruleset that is shown below is designed to specifically find this malicious application using the start of the classes.dex hex code.
+
+\lstinputlisting[language=YARA]{individual/jordy/ruleset.yara}
