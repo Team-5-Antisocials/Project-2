@@ -1,0 +1,43 @@
+\section*{Executive summary}
+% \addcontentsline{toc}{section}{\protect\numberline{}Executive summary}
+The FireFox application turned out be very malicious.
+VirusTotal indicated that 25 out of the 61 security vendors marked the application as malicious.
+Most of these security vendors indicated that the application was a Trojan.
+The application asked for a lot of permissions that are dangerous to give out during a fake installation screen.
+After saying it was not installed it ran in the background and was not accessible.
+The network analysis indicated it connected to a presumably command and control server and send over data from the phone.
+During the code analysis it turned out that a lot of it was obfuscated.
+There were a few functions that suggested that the application contained a keylogger and send data through a network socket.
+
+The malicious Doodle Jump 2 application seems to be relatively harmless.
+From the VirusTotal scan it seemed like this application would be riddled with AdWare, but after having performed a behavior analysis, it became clear that this wasn’t really the case.
+What did happen during this analysis is that a pop-up was displayed with a message in Arabic.
+Other than this all the collectibles and levels were unlocked.
+The network and process analysis did not reveal anything that seemed malicious.
+In fact, it showed how similar the application worked with the legitimate application.
+The code analyses of both applications did seem to show differences, but not ones which were significant.
+All of this would lead an outside observer to believe that the malicious application is not really all that malicious, but rather the result of a hobbyist who likes to tinker with popular apps in his or her free time.
+
+The seemingly innocent DHL application turned out to be very malicious.
+VirusTotal indicated that 33/63 security vendors marked the application as malicious.
+Most of them indicated that the application was either a Trojan or a Banker.
+The application itself had a background of the original application, then proceeded to ask for a lot of permissions.
+After which, it redirected to the original DHL application.
+The network analysis indicated that the application was sending messages to a telegram user, \texttt{L0gicMan}, using the telegram API.
+A more thorough analysis of the code revealed that the application could hack not only almost every bank, but also some crypto wallets and email clients.
+
+The Chrome application was a very recent detection with first having only 16/64 security vendor flags, later on changing to 24/64 flags. 
+It was marked by most of the vendors as a Banking Trojan or regular Trojan. 
+As soon as the application is installed it will ask the user to enable the app in the application settings giving it free reign over the phone. 
+The application will then keep running and not allow the user to uninstall the app. 
+It will periodically seek out a connection with a Cloudflare IP sending a Json file. 
+The app will also save the users settings and upload them to a local database.
+
+This researched proved that the use of an antivirus program is indispensable.
+It was quite interesting to see the variety of applications that contained malicious activity, it really could be any application hacking a bank account.
+Using commonsense when installing an application is very important. A few things an android user could think about are:
+\begin{itemize}
+    \item Only installing applications from the Google Play Store.
+    \item Don't do things you're not familiar with, especially when installing applications.
+    \item Use the default security measures on your device.
+\end{itemize}

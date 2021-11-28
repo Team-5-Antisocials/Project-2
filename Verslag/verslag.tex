@@ -10,7 +10,10 @@
 \usepackage{wrapfig}
 \usepackage{tabularray}
 \usepackage{listings}
+\usepackage{tabularx}
+\usepackage[final]{pdfpages}
 \usepackage{footmisc}
+
 
 \hypersetup{
     colorlinks,
@@ -45,19 +48,18 @@
   tabsize=3
 }
 
+
 % \bibliographystyle{6}
 \begin{document}
+
+\includepdf{voorpagina.pdf}
 
 \begin{titlepage}
   \centering
     \vfill
     {\bfseries\Huge
-	    Scope \& Methodology
+      Android malware analysis
         \vskip2cm
-      }
-      {\bfseries\Large
-        Jayden Weverink
-        \vskip0cm
       }
       {\bfseries\Large
         Jordy van der List
@@ -86,25 +88,31 @@
     \vfill
     \vfill
 \end{titlepage}
-\newpage
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\flushleft
+
+\input{Document information overview.tex}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0em}
+\flushleft
+
 \tableofcontents
 
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
 \flushleft
 
-% \clearpage %====================================================================
-\section{Introduction}
+\newpage
+\input{introduction.tex}
 
-
-\clearpage %====================================================================
+\newpage
 \input{scope}
 
 \newpage
 \input{methodology}
-
-\newpage
-\input{individual/jayden/jayden.tex}
 
 \newpage
 \input{individual/jordy/jordy.tex}
@@ -118,13 +126,10 @@
 \newpage
 \input{individual/tim/tim.tex}
 
-% \bibliography{references} % DIT ZIJN VOORBEELDEN
-% \begin{thebibliography}{9}
-% \end{thebibliography}
+\include{discussion.tex}
+
+\include{conclusie.tex}
+
+\include{bibliography.tex}
 
 \end{document}
-
-
-% book:
-% author (release year). \textit{title}\\
-% Editors. Publisher.
