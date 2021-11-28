@@ -1,5 +1,8 @@
 \subsection{Countermeasures and detection}
 
+This chapter will describe possible countermeasures to take against the malicious application.
+Including a YARA rule set, preventative measures and reactive measures.
+
 \subsubsection{Preventive measures}
 
 It was quite easy to prevent yourself from installing this malicious application.
@@ -17,7 +20,7 @@ Any variations of this name are not this application, for example \texttt{DHL Ex
 
 Additionally, it is always advisable to have an antivirus installed,
 specifically \href{https://play.google.com/store/apps/details?id=com.antivirus&hl=en&gl=US}{AVG AntiVirus} is a widely used and trusted antivirus,
-it has been installed over a 100 million times and has a rating of \texttt{4.7\\5} with 7.3 million reviewers.
+it has been installed over 100 million times and has a rating of \texttt{4.7\textbackslash5} with 7.3 million reviewers.
 
 \subsubsection{Reactive measures}
 
@@ -32,6 +35,15 @@ For additional support it could be useful to contact your local authorities on t
 
 \newpage
 \subsubsection{YARA rule set}
+
+It was quite difficult to create a good rule set that would detect other bankers similar to this one.
+The main cause of this was that it is not possible to look through the actual strings inside the code.
+Just a set of bytes in a specific order.
+A hex editor was used to find interesting bytes.
+However, the only interesting bytes that were found, were filenames which would be common with every android app.
+Thus, it was decided to take the first couple of bytes from the \texttt{classes.dex}.
+This would prevent other applications from being flagged, while this application would still be flagged.
+
 \lstinputlisting[language=YARA]{individual/rafael/ruleset.yar}
 % \input{individual/rafael/ruleset.yar}
 % somehow include the yara ruleset in the document. If possible with highlighting???
