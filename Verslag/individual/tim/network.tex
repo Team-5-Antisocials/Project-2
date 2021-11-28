@@ -1,0 +1,39 @@
+\subsection{Network analysis}
+
+Analysing the network of the application proved to be a difficult task. 
+In order to only retrieve the network traffic from the Android emulator Mitmproxy was used.
+Mitmproxy had an issue with the Android emulator where it would constantly fail the TLS handshake. 
+This made following the new connections quite hard. 
+In order to properly retrieve all the incoming and outgoing traffic \href{https://github.com/shroudedcode/apk-mitm}{apk-mitm} was used.
+
+\subsubsection{HTTP proxy analysis}
+
+Mitmproxy was able to detect an incoming POST request to an outside IP. 
+The POST request would connect with the IP address 172.67.131.170 as seen on figure \ref{tim-mitmrequest}.
+
+\begin{figure}[H]
+    \includegraphics[width=1\textwidth]{mitmreq.png}
+    \caption{IP found with mitm}
+    \label{tim-mitmrequest}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=1\textwidth]{networkresponse.png}
+    \caption{Response given to the request}
+    \label{tim-mitmresponse}
+\end{figure}
+
+The POST request contained a JSON file which had an ID with two values. 
+The two values however were both null as shown on figure \ref{tim-mitmresponse}.
+This was most likely due to an error in the application. 
+
+Also shown in this figure is a site that a Json file would be sent to.
+This site is an online JSON placeholder site.
+Any other requests that Mitmproxy picked up were just the expected connections done by Google.
+
+\subsubsection{Reconnaissance}
+
+A short reconnaissance was done on the IP address, Mitmproxy had noted it was a Cloudflare connection.
+\href{https://www.shodan.io/host/172.67.131.170}{Shodan} backed this up by showing that it was indeed owned by Cloudflare, Inc.
+There was not much else to go on except for one connection.
+The company that built the app made sure to cover their tracks.
